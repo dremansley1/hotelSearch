@@ -73,7 +73,7 @@ public class hotelSearch extends JPanel implements ActionListener {
         resultslabel.setBounds(20, 125, 200, 25);
         informationlabel.setBounds(600, 125, 185, 25);
         loadingLabel.setBounds(400, 200, 200, 200);
-        resultslist.setBounds(20, 165, 465, 300);
+        resultslist.setBounds(20, 165, 500, 600);
         informationContainer.setBounds(600, 165, 260, 300);
 
         searchBtn.addActionListener(this);
@@ -96,15 +96,15 @@ public class hotelSearch extends JPanel implements ActionListener {
                 do {
 
                     URL img = new URL(search_results.getString(3));
-                    ImageIcon image = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(125, 70, Image.SCALE_DEFAULT));
+                    ImageIcon image = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(125, 80, Image.SCALE_DEFAULT));
                     JLabel imgLabel = new JLabel("", image, JLabel.CENTER);
                     resultslist.add(imgLabel);
 
                     resultslist.add(new JLabel("      " + search_results.getString(2)));
-                    resultslist.add(new JLabel("      Rating: " + search_results.getString(5)));
+                    resultslist.add(new JLabel("      Price:  £" + search_results.getString(5)));
+                    resultslist.add(new JLabel("      Rating: " + search_results.getString(6)));
                     resultslist.validate();
                     resultslist.repaint();
-
 
                 } while (search_results.next());
             }
