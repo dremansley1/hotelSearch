@@ -15,7 +15,6 @@ public class findHotels {
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM hotels WHERE hotelLocation = ?");
             stmt.setString(1, location);
             results = stmt.executeQuery(); 
-           
         } 
         catch (Exception e) {
             System.out.println(e);
