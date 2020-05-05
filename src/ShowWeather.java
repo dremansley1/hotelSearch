@@ -35,5 +35,4 @@ public class ShowWeather extends HttpClient {
         }
         return jsonObj;
     }
-
 }
